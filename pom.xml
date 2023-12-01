@@ -2,11 +2,20 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
-  <artifactId>my-maven-project</artifactId>
+  <artifactId>hello-world</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>my-maven-project</name>
-  <url>http://maven.apache.org</url>
+  <name>hello-world</name>
+  <distributionManagement>
+        <repository>
+            <id>hello-world</id>
+            <url>http://192.168.100.239:8082/artifactory/hello-world</url>
+        </repository>
+        <snapshotRepository>
+            <id>hello-world-snapshot</id>
+            <url>http://localhost:8082/artifactory/hello-world-snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
